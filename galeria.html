@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Galería | Ultimate Pádel</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+	<section class="gallery-page">
+
+		<a href="index.html#galeria" class="gallery-back">
+			← VOLVER A LA GALERÍA
+		</a>
+
+		<div class="gallery-page-header">
+			<p>ULTIMATE PÁDEL · ARANJUEZ</p>
+			<h1>GALERÍA</h1>
+		</div>
+
+		<div class="gallery-edition">
+			<span>EDICIÓN</span>
+			<h2>2026</h2>
+		</div>
+<div class="gallery-full-grid" id="gallery-full-grid"></div>
+
+</div>
+	</section>
+<div class="lightbox" id="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <button class="lightbox-prev">‹</button>
+    <img id="lightbox-img" src="" alt="Ultimate Pádel">
+    <button class="lightbox-next">›</button>
+</div>
+<script>
+	const galleryGrid = document.getElementById("gallery-full-grid");
+
+for (let i = 1; i <= 258; i++) {
+	if (i === 253) continue;
+    const numero = String(i).padStart(3, "0");
+
+    const foto = document.createElement("div");
+    foto.className = "gallery-full-photo";
+
+    foto.innerHTML = `
+        <img src="images/galeria-2026/UP-${numero}.jpg"
+             alt="Ultimate Pádel 2026 - Foto ${numero}">
+    `;
+
+    galleryGrid.appendChild(foto);
+}
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const galleryImages = document.querySelectorAll(".gallery-full-photo img");
+    const closeLightbox = document.querySelector(".lightbox-close");
+const prevButton = document.querySelector(".lightbox-prev");
+const nextButton = document.querySelector(".lightbox-next");
+let currentIndex = 0;
+    galleryImages.forEach((img, index) => {
+    img.addEventListener("click", () => {
+        currentIndex = index;
+        lightboxImg.src = img.src;
+        lightbox.style.display = "flex";
+    });
+});
+
+prevButton.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+    lightboxImg.src = galleryImages[currentIndex].src;
+});
+
+nextButton.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % galleryImages.length;
+    lightboxImg.src = galleryImages[currentIndex].src;
+});
+
+    closeLightbox.addEventListener("click", () => {
+        lightbox.style.display = "none";
+    });
+
+    lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) {
+            lightbox.style.display = "none";
+        }
+    });
+	document.addEventListener("keydown", (e) => {
+    if (lightbox.style.display !== "flex") return;
+
+    if (e.key === "ArrowLeft") {
+        currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+        lightboxImg.src = galleryImages[currentIndex].src;
+    }
+
+    if (e.key === "ArrowRight") {
+        currentIndex = (currentIndex + 1) % galleryImages.length;
+        lightboxImg.src = galleryImages[currentIndex].src;
+    }
+
+    if (e.key === "Escape") {
+        lightbox.style.display = "none";
+    }
+});
+</script>
+</body>
+</html>
