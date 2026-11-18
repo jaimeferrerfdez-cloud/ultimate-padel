@@ -483,6 +483,9 @@ background-repeat: no-repeat;
     display: block;
     transition: transform 0.5s ease;
 }
+.gallery-photo:nth-child(4) img {
+    object-position: 30% center;
+}
 
 .gallery-photo:hover img {
     transform: scale(1.04);
@@ -1423,11 +1426,1603 @@ gap: 35px;
 }
 
 .navbar {
-    padding-left: 0px;
+    padding-left: -0px;
     padding-right: 0px;
 }
 
 .brand {
     margin-right: auto;
 }
+}
+.sponsor-ribe img {
+    transform: scale(0.72) translate(-10px, 15px);
+}
+/* INSCRIPCIONES */
+
+.registration {
+    padding: 100px 8%;
+    background: #13c4d4;
+    color: #0b0b0b;
+}
+
+.registration-header {
+    max-width: 800px;
+    margin-bottom: 55px;
+}
+
+.registration-header h2 {
+    font-size: 72px;
+    line-height: 0.85;
+    letter-spacing: -4px;
+    margin: 15px 0 25px;
+}
+
+.registration-header p {
+    max-width: 600px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+#registration-form {
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+}
+
+.form-player,
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-player h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.registration label {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.registration input,
+.registration select,
+.registration textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #0b0b0b;
+    background: #fff;
+    color: #0b0b0b;
+    font: inherit;
+}
+
+.registration textarea {
+    resize: vertical;
+}
+
+.registration button {
+    border: none;
+    cursor: pointer;
+    width: fit-content;
+}
+
+#form-message {
+    grid-column: 1 / -1;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .registration {
+        padding: 70px 6%;
+    }
+
+    .registration-header h2 {
+        font-size: 48px;
+        letter-spacing: -2px;
+    }
+
+    #registration-form {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+  .sponsor-heineken img,
+.sponsor-fruypis img {
+    transform: scale(4);
+}
+
+.sponsor-piggo img {
+    transform: scale(2.5);
+}
+
+.sponsor-ribe img {
+    transform: scale(1.1) translate(-10px, 10px);
+}
+
+
+/* ===== MENÚ MÓVIL ULTIMATE PADEL ===== */
+
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 76px;
+        z-index: 1000;
+        background: #0b0b0b;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 22px;
+        box-sizing: border-box;
+    }
+
+    .navbar .brand img {
+        max-height: 52px;
+        width: auto;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 6px;
+        width: 44px;
+        height: 44px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+        order: -1;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: #16c4d3;
+        border-radius: 2px;
+    }
+
+    #menu-principal {
+        position: fixed;
+        top: 76px;
+        left: 0;
+        width: min(85vw, 340px);
+        height: calc(100dvh - 76px);
+        background: #101214;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 0;
+        padding: 24px;
+        box-sizing: border-box;
+        overflow-y: auto;
+        transform: translateX(-110%);
+        transition: transform 0.3s ease;
+        z-index: 1001;
+        visibility: hidden;
+    }
+
+    #menu-principal.menu-abierto {
+        transform: translateX(0);
+        visibility: visible;
+    }
+
+    #menu-principal a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 700;
+        padding: 17px 4px;
+        border-bottom: 1px solid #303438;
+    }
+
+    #menu-principal a:hover {
+        color: #16c4d3;
+    }
+
+    .menu-toggle.activo span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .menu-toggle.activo span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.activo span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    .menu-toggle span {
+        transition: transform 0.25s ease, opacity 0.25s ease;
+    }
+}
+
+/* Ajuste del logo en el menú móvil */
+@media (max-width: 768px) {
+    .navbar .brand {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        justify-content: center;
+        min-width: 0;
+    }
+
+    .navbar .brand img {
+        height: 60px;
+        max-height: none;
+        width: auto;
+        max-width: 100%;
+        object-fit: contain;
+    }
+
+    .navbar .menu-toggle {
+        flex-shrink: 0;
+    }
+}
+
+/* Menú y logo juntos, estilo Real Madrid */
+@media (max-width: 768px) {
+
+    .navbar {
+        justify-content: flex-start;
+        gap: 10px;
+    }
+
+    .navbar .menu-toggle {
+        order: -1;
+        flex: 0 0 44px;
+        margin: 0;
+    }
+
+    .navbar .brand {
+        flex: 0 0 auto;
+        width: 75px;
+        height: 65px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        overflow: visible;
+    }
+
+    .navbar .brand img {
+        display: block;
+        width: 75px;
+        height: 65px;
+        max-width: none;
+        max-height: none;
+        object-fit: contain;
+        transform: scale(1.35);
+        transform-origin: left center;
+    }
+}
+
+/* Ajuste fino del logo y menú móvil */
+@media (max-width: 768px) {
+    .navbar {
+        gap: 4px;
+    }
+
+    .navbar .brand img {
+        transform: scale(1.5);
+    }
+}
+
+/* Ajuste final de posición y tamaño del logo */
+@media (max-width: 768px) {
+    .navbar {
+        gap: 0;
+    }
+
+    .navbar .brand {
+        margin-left: -8px;
+    }
+
+    .navbar .brand img {
+        transform: scale(1.65);
+        transform-origin: left center;
+    }
+}
+
+/* Acercar el logo al botón del menú */
+@media (max-width: 768px) {
+    .navbar .brand {
+        margin-left: -30px;
+    }
+}
+
+/* Evitar que el logo bloquee el botón del menú */
+@media (max-width: 768px) {
+    .navbar .menu-toggle {
+        position: relative;
+        z-index: 20;
+    }
+
+    .navbar .brand {
+        position: relative;
+        z-index: 1;
+    }
+
+    .navbar .brand img {
+        pointer-events: none;
+    }
+}
+
+/* MENÚ MÓVIL A PANTALLA COMPLETA */
+@media (max-width: 768px) {
+
+    .navbar nav {
+        width: 100vw;
+        max-width: 100vw;
+        left: 0;
+        right: 0;
+        box-sizing: border-box;
+        background-color: #0b0b0b;
+    }
+
+}
+
+/* Mejorar la lectura del menú móvil */
+@media (max-width: 768px) {
+    .navbar nav a {
+        font-size: 18px;
+        font-weight: 600;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+}
+}
+/* ==================================
+   MUCHO MÁS QUE PÁDEL
+================================== */
+
+.experiencia {
+    background: #0b0b0b;
+    padding: 90px 24px;
+    color: #ffffff;
+}
+
+.experiencia-intro {
+    max-width: 850px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.experiencia-etiqueta {
+    display: block;
+    color: #16c4d3;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 16px;
+}
+
+.experiencia-intro h2 {
+    font-size: clamp(32px, 5vw, 58px);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.experiencia-intro p {
+    color: #c5c5c5;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.experiencia-grid {
+    max-width: 1150px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.experiencia-card {
+    background: #17191b;
+    border: 1px solid #303438;
+    border-radius: 14px;
+    padding: 25px 18px;
+    text-align: center;
+    min-width: 0;
+    transition: transform 0.25s ease,
+                border-color 0.25s ease;
+}
+
+.experiencia-card:hover {
+    transform: translateY(-5px);
+    border-color: #16c4d3;
+}
+
+.experiencia-icono {
+    font-size: 55px;
+    margin: 15px 0 25px;
+}
+
+.experiencia-camiseta {
+    display: block;
+    width: 100%;
+    height: 170px;
+    object-fit: contain;
+    margin: 0 auto 20px;
+    border-radius: 8px;
+}
+
+.experiencia-card h3 {
+    font-size: 19px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+.experiencia-card p {
+    color: #bdbdbd;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Adaptación a móviles */
+@media (max-width: 768px) {
+
+    .experiencia {
+        padding: 65px 18px;
+    }
+
+    .experiencia-intro {
+        margin-bottom: 30px;
+    }
+
+    .experiencia-intro h2 {
+        font-size: 34px;
+    }
+
+    .experiencia-intro p {
+        font-size: 15px;
+    }
+
+    .experiencia-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .experiencia-card {
+        padding: 20px 12px;
+    }
+
+    .experiencia-icono {
+        font-size: 40px;
+        margin: 10px 0 20px;
+    }
+
+    .experiencia-camiseta {
+        height: 120px;
+    }
+
+    .experiencia-card h3 {
+        font-size: 15px;
+    }
+
+    .experiencia-card p {
+        font-size: 12px;
+    }
+}
+
+/* Móviles muy estrechos */
+@media (max-width: 360px) {
+    .experiencia-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* NUEVO FONDO: MUCHO MÁS QUE PÁDEL */
+.experiencia {
+    background: #16c4d3;
+}
+
+.experiencia-etiqueta {
+    color: #101214;
+}
+
+.experiencia-intro h2 {
+    color: #101214;
+}
+
+.experiencia-intro p {
+    color: #20383c;
+}
+
+/* FONDO BLANCO - MUCHO MÁS QUE PÁDEL */
+.experiencia {
+    background: #f5f5f5;
+}
+
+.experiencia-etiqueta {
+    color: #089eae;
+}
+
+.experiencia-intro h2 {
+    color: #101214;
+}
+
+.experiencia-intro p {
+    color: #555555;
+}
+
+/* ANIMACIONES MODERNAS AL HACER SCROLL */
+
+.reveal {
+    opacity: 1;
+    transform: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .js-animations .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition:
+            opacity 0.75s ease,
+            transform 0.75s cubic-bezier(0.2, 0.7, 0.2, 1);
+    }
+
+    .js-animations .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* CAMISETA OFICIAL - MEJOR PRESENTACIÓN */
+.experiencia-camiseta {
+    height: 200px;
+    width: 100%;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .experiencia-camiseta {
+        height: 135px;
+    }
+}
+
+/* TARJETAS INTERACTIVAS - ULTIMATE PADEL */
+
+@media (hover: hover) and (pointer: fine) {
+    .experiencia-card {
+        transition:
+            transform 0.35s ease,
+            box-shadow 0.35s ease,
+            border-color 0.35s ease;
+    }
+
+    .experiencia-card:hover {
+        transform: translateY(-8px);
+        border-color: #16c4d3;
+        box-shadow: 0 16px 35px rgba(0, 0, 0, 0.18);
+    }
+}
+
+/* EFECTO HOVER MÁS VISIBLE */
+@media (hover: hover) and (pointer: fine) {
+
+    .experiencia-card:hover {
+        transform: translateY(-10px) scale(1.025);
+        border-color: #16c4d3;
+        box-shadow:
+            0 0 0 2px #16c4d3,
+            0 20px 45px rgba(0, 0, 0, 0.25),
+            0 0 25px rgba(22, 196, 211, 0.18);
+    }
+
+}
+
+/* TIPOGRAFÍA DEPORTIVA - ULTIMATE PADEL 2027 */
+
+h1, h2, h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.experiencia-intro h2 {
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.experiencia-card h3 {
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+/* CERRAR LOS CUADROS DEL FORMATO */
+
+.format-steps .format-step {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+/* BORDES COMPLETOS DEL FORMATO EN MÓVIL */
+
+@media (max-width: 768px) {
+
+    .format-steps .format-step {
+        border-left: 1px solid rgba(255, 255, 255, 0.22);
+        border-right: 1px solid rgba(255, 255, 255, 0.22);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+    }
+
+}
+
+/* FOTOGRAFÍAS DE MUCHO MÁS QUE PÁDEL */
+
+.experiencia-foto {
+    display: block;
+    width: 100%;
+    height: 190px;
+    object-fit: contain;
+    object-position: center;
+    margin: 0 auto 20px;
+    border-radius: 8px;
+}
+
+/* ADAPTACIÓN A MÓVIL */
+
+@media (max-width: 768px) {
+
+    .experiencia-foto {
+        height: 130px;
+        margin-bottom: 15px;
+    }
+
+}
+
+/* TIPOGRAFÍA DEPORTIVA SOLO EN ORDENADOR */
+
+@media (min-width: 769px) {
+
+    h1, h2, h3 {
+        font-family: 'Barlow Condensed', sans-serif;
+        font-weight: 800;
+        letter-spacing: 0.5px;
+    }
+
+    .experiencia-intro h2 {
+        font-weight: 900;
+        letter-spacing: 1px;
+    }
+
+}
+
+/* PORTADA - RECUPERAR TIPOGRAFÍA ORIGINAL */
+
+@media (min-width: 769px) {
+
+    .hero h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 900;
+        letter-spacing: -2px;
+    }
+
+}
+
+/* TIPOGRAFÍA ORIGINAL - COMING SOON */
+
+@media (min-width: 769px) {
+
+    .next-tournament h2 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 900;
+        letter-spacing: -0,3px;
+    }
+
+}
+
+/* VENTANAS EMERGENTES - ULTIMATE PADEL 2027 */
+
+.experiencia-modal[hidden] {
+    display: none !important;
+}
+
+.experiencia-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.experiencia-modal-contenido {
+    position: relative;
+    width: 100%;
+    max-width: 580px;
+    max-height: 90vh;
+    overflow-y: auto;
+
+    background: #17191b;
+    color: white;
+    border: 1px solid rgba(22, 196, 211, 0.4);
+    border-radius: 18px;
+    padding: 40px;
+    box-sizing: border-box;
+
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5);
+}
+
+.experiencia-modal-cerrar {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+
+    background: none;
+    border: none;
+    color: white;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.experiencia-modal-cerrar:hover {
+    color: #16c4d3;
+}
+
+.experiencia-modal-etiqueta {
+    display: block;
+    color: #16c4d3;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.experiencia-modal-contenido h2 {
+    font-size: clamp(32px, 5vw, 52px);
+    margin: 0 0 20px;
+    color: white;
+}
+
+.experiencia-modal-contenido h3 {
+    font-size: 22px;
+    margin: 25px 0 10px;
+    color: #16c4d3;
+}
+
+.experiencia-modal-contenido p {
+    color: #dddddd;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.experiencia-modal-imagen {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    margin: 10px auto 25px;
+}
+
+/* TARJETAS PULSABLES */
+
+.experiencia-card[data-modal] {
+    cursor: pointer;
+}
+
+.experiencia-card[data-modal]:focus-visible {
+    outline: 3px solid #16c4d3;
+    outline-offset: 4px;
+}
+
+/* ADAPTACIÓN A MÓVIL */
+
+@media (max-width: 768px) {
+    .experiencia-modal {
+        padding: 12px;
+    }
+
+    .experiencia-modal-contenido {
+        padding: 30px 22px;
+        max-height: 85dvh;
+    }
+
+    .experiencia-modal-imagen {
+        height: 140px;
+    }
+
+    .experiencia-modal-contenido p {
+        font-size: 14px;
+    }
+}
+
+/* INDICADOR DE TARJETAS INTERACTIVAS */
+
+.experiencia-ver-mas {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: auto;
+    padding-top: 18px;
+
+    color: #16c4d3;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.experiencia-ver-mas span {
+    font-size: 17px;
+    transition: transform 0.25s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .experiencia-card:hover .experiencia-ver-mas span {
+        transform: translate(3px, -3px);
+    }
+}
+
+@media (max-width: 768px) {
+    .experiencia-ver-mas {
+        font-size: 9px;
+        letter-spacing: 0.5px;
+        gap: 4px;
+        padding-top: 12px;
+    }
+}
+/* CORREGIR ENCUADRE FOTO 4 - SOLO ORDENADOR */
+@media (min-width: 769px) {
+    .gallery-photo:nth-child(4) img {
+        object-position: center top;
+    }
+}
+
+/* ==========================================
+   CUADROS DE ELIMINATORIAS - ULTIMATE PADEL
+   ========================================== */
+
+.bracket-section .bracket,
+.bracket-section-bajo .bracket {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+    align-items: stretch;
+    margin-top: 40px;
+}
+
+/* Cada ronda ocupa una columna */
+.bracket-section .bracket-round,
+.bracket-section-bajo .bracket-round {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+/* Títulos de las rondas */
+.bracket-section .bracket-round h3,
+.bracket-section-bajo .bracket-round h3 {
+    color: #13c4d4;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin: 0 0 24px;
+}
+
+/* Tarjetas de los partidos */
+.bracket-section .bracket-match,
+.bracket-section-bajo .bracket-match {
+    margin: 0 0 18px;
+    flex-shrink: 0;
+}
+
+/* Distribución de cuartos */
+.bracket-section .bracket-round:first-child {
+    gap: 14px;
+}
+
+/* Semifinales centradas verticalmente */
+.bracket-section .bracket-round:nth-child(2) {
+    justify-content: space-around;
+}
+
+/* Final centrada */
+.bracket-section .bracket-round:nth-child(3) {
+    justify-content: center;
+}
+
+/* B Bajo: cuatro columnas */
+.bracket-section-bajo .bracket {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* Octavos */
+.bracket-section-bajo .bracket-round:first-child {
+    gap: 10px;
+}
+
+/* Cuartos */
+.bracket-section-bajo .bracket-round:nth-child(2) {
+    justify-content: space-around;
+}
+
+/* Semifinales y final */
+.bracket-section-bajo .bracket-round:nth-child(3) {
+    justify-content: space-evenly;
+}
+
+/* Campeones */
+.bracket-section .champion-box,
+.bracket-section-bajo .champion-box {
+    margin-top: 20px;
+    border-radius: 4px;
+}
+
+/* Evitar que los nombres desborden */
+.bracket-match div {
+    overflow-wrap: anywhere;
+}
+
+/* MÓVIL: permitir desplazamiento horizontal */
+@media (max-width: 768px) {
+
+    .bracket-section .bracket,
+    .bracket-section-bajo .bracket {
+        display: grid;
+        grid-template-columns: repeat(3, 230px);
+        gap: 16px;
+        overflow-x: auto;
+        padding-bottom: 20px;
+        scroll-snap-type: x proximity;
+    }
+
+    .bracket-round {
+        scroll-snap-align: start;
+    }
+
+    .bracket-match div {
+        font-size: 11px;
+        padding: 12px 10px;
+    }
+}
+
+/* CUADRO B BAJO MÁS COMPACTO - ORDENADOR */
+@media (min-width: 769px) {
+
+    #cuadro-principal-bajo .bracket {
+        gap: 18px;
+        margin-top: 25px;
+    }
+
+    #cuadro-principal-bajo .bracket-round {
+        gap: 0;
+    }
+
+    #cuadro-principal-bajo .bracket-round h3 {
+        font-size: 11px;
+        margin-bottom: 14px;
+    }
+
+    #cuadro-principal-bajo .bracket-match {
+        margin: 0 0 10px;
+    }
+
+    #cuadro-principal-bajo .bracket-match div {
+        padding: 8px 10px;
+        font-size: 10px;
+        line-height: 1.3;
+    }
+
+    #cuadro-principal-bajo .bracket-round:nth-child(2) {
+        justify-content: space-around;
+    }
+
+    #cuadro-principal-bajo .bracket-round:nth-child(3) {
+        justify-content: space-evenly;
+    }
+
+    #cuadro-principal-bajo .champion-box {
+        padding: 14px;
+        margin-top: 10px;
+    }
+
+    #cuadro-principal-bajo .champion-box strong {
+        font-size: 13px;
+    }
+}
+
+/* B BAJO - CUADRO DE CUATRO COLUMNAS */
+
+@media (min-width: 769px) {
+
+    #cuadro-principal-bajo .bracket {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 16px;
+        align-items: stretch;
+    }
+
+    #cuadro-principal-bajo .bracket-round {
+        min-width: 0;
+    }
+
+    /* Cuartos */
+    #cuadro-principal-bajo .bracket-round:nth-child(2) {
+        justify-content: space-around;
+    }
+
+    /* Semifinales */
+    #cuadro-principal-bajo .bracket-round:nth-child(3) {
+        justify-content: space-around;
+    }
+
+    /* Final */
+    #cuadro-principal-bajo .bracket-round:nth-child(4) {
+        justify-content: center;
+    }
+
+    #cuadro-principal-bajo .bracket-match div {
+        font-size: 9px;
+        padding: 9px 7px;
+    }
+
+    #cuadro-principal-bajo .champion-box {
+        margin-top: 18px;
+        padding: 14px 10px;
+    }
+
+    #cuadro-principal-bajo .champion-box strong {
+        font-size: 12px;
+        overflow-wrap: anywhere;
+    }
+}
+
+/* B BAJO - DESPLAZAMIENTO HORIZONTAL EN MÓVIL */
+
+@media (max-width: 768px) {
+
+    #cuadro-principal-bajo .bracket {
+        grid-template-columns: repeat(4, 230px);
+    }
+}
+
+/* CONEXIONES AUTOMÁTICAS DE ELIMINATORIAS */
+
+.bracket-section .bracket,
+.bracket-section-bajo .bracket {
+    position: relative;
+}
+
+.bracket-conexiones {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 2;
+    overflow: visible;
+}
+
+@media (max-width: 768px) {
+    .bracket-conexiones {
+        display: none;
+    }
+}
+
+
+/* AJUSTE FINO DE TIPOGRAFÍA EN MÓVIL */
+@media (max-width: 768px) {
+    h1, h2, h3 {
+        letter-spacing: 0.3px !important;
+    }
+}
+/* JUNTAR LETRAS DE LOS DOS TÍTULOS EN ORDENADOR */
+@media (min-width: 769px) {
+    .hero h1,
+    .next-tournament h2 {
+        letter-spacing: -4.5px !important;
+    }
+}
+
+/* FECHA DEL TORNEO EN UNA SOLA LÍNEA - ORDENADOR */
+@media (min-width: 769px) {
+    .next-tournament h2 {
+        font-size: clamp(30px, 4vw, 65px);
+        white-space: nowrap;
+    }
+}
+
+/* FECHA DEL TORNEO EN MÓVIL */
+@media (max-width: 768px) {
+    .next-tournament h2 {
+        font-size: clamp(35px, 10vw, 48px);
+        white-space: nowrap;
+        letter-spacing: -1px !important;
+    }
+}
+
+/* UBICACIÓN DEL TORNEO EN MÓVIL */
+@media (max-width: 768px) {
+    .next-tournament .info-item strong {
+        white-space: nowrap;
+        font-size: clamp(10px, 2.7vw, 14px);
+    }
+}
+
+/* ======================================
+   PATROCINADORES - NUEVO DISEÑO
+====================================== */
+
+/* Sección más compacta */
+.sponsors {
+    padding: 75px 8%;
+}
+
+/* Título principal en una línea */
+.sponsors-header {
+    max-width: none;
+}
+
+.sponsors-header h2 {
+    font-size: clamp(28px, 4.3vw, 66px);
+    line-height: 1;
+    letter-spacing: -2px;
+    white-space: nowrap;
+    margin-bottom: 45px;
+}
+
+/* Subtítulos de los dos grupos */
+.sponsors-subtitle {
+    font-size: clamp(22px, 2.2vw, 34px);
+    font-weight: 900;
+    letter-spacing: 0;
+    margin: 35px 0 0;
+}
+
+
+/* PATROCINADORES PRINCIPALES: 3 COLUMNAS */
+.sponsors-grid-main {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 22px;
+    border: none;
+}
+
+.sponsors-grid-main .sponsor-logo {
+    height: 125px;
+    padding: 22px;
+}
+
+/* COLABORADORES: 5 COLUMNAS */
+.sponsors-grid-secondary {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 22px;
+    border: none;
+}
+
+.sponsors-grid-secondary .sponsor-logo {
+    height: 90px;
+    padding: 15px;
+}
+
+/* TARJETAS INDEPENDIENTES */
+.sponsors-grid .sponsor-logo {
+    background: #151515;
+    border: 1px solid #333;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.sponsors-grid .sponsor-logo:hover {
+    background: #202020;
+    border-color: #13c4d4;
+    transform: translateY(-3px);
+}
+
+/* CONSERVAR PROPORCIONES DE LOS LOGOS */
+.sponsors-grid .sponsor-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+    .sponsors-grid-secondary {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* MÓVIL */
+@media (max-width: 768px) {
+    .sponsors {
+        padding: 65px 5%;
+    }
+
+    .sponsors-header h2 {
+        font-size: clamp(18px, 4.3vw, 34px);
+        letter-spacing: -0.7px;
+        margin-bottom: 30px;
+    }
+
+    .sponsors-subtitle {
+        font-size: 22px;
+        margin-top: 30px;
+    }
+
+    .sponsors-grid-main {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .sponsors-grid-main .sponsor-logo {
+        height: 105px;
+        padding: 15px;
+    }
+
+    .sponsors-grid-secondary {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .sponsors-grid-secondary .sponsor-logo {
+        height: 80px;
+        padding: 10px;
+    }
+}
+
+/* TÍTULO DE PATROCINADORES EN TURQUESA */
+.sponsors-header h2 {
+    color: #13c4d4;
+}
+
+/* TARJETAS RESERVADAS PARA FUTUROS PATROCINADORES */
+.sponsors-grid .sponsor-placeholder {
+    background: #101010;
+    border: 1px dashed #383838;
+    cursor: default;
+}
+
+.sponsors-grid .sponsor-placeholder:hover {
+    background: #101010;
+    border-color: #383838;
+    transform: none;
+}
+
+/* CORREGIR LOGOS CORTADOS EN PATROCINADORES */
+
+.sponsors-grid .sponsor-logo a {
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sponsors-grid .sponsor-logo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transform: none;
+}
+
+/* EVITAR QUE LOS LOGOS SOBRESALGAN */
+.sponsors-grid .sponsor-logo {
+    min-width: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* AJUSTAR LOGOS PEQUEÑOS SIN RECORTARLOS */
+.sponsors-grid .sponsor-marqueta img,
+.sponsors-grid .sponsor-studio360 img,
+.sponsors-grid .sponsor-heineken img,
+.sponsors-grid .sponsor-fruypis img {
+    transform: scale(4.5);
+}
+
+.sponsors-grid .sponsor-logo:not([class*="sponsor-"]) img {
+    transform: none;
+}
+
+/* AJUSTES INDIVIDUALES DE LOGOS */
+
+/* Reducir los dos más grandes */
+.sponsors-grid .sponsor-bdp img,
+.sponsors-grid .sponsor-autosae img {
+    transform: scale(0.7);
+}
+
+/* Aumentar los logos pequeños */
+.sponsors-grid .sponsor-alsacor img,
+.sponsors-grid .sponsor-fysol img {
+    transform: scale(1.5);
+}
+
+/* E.Leclerc, Base y Piggo */
+.sponsors-grid-secondary .sponsor-logo:nth-child(5) img {
+    transform: scale(3.6);
+}
+
+.sponsors-grid-secondary .sponsor-logo:nth-child(6) img {
+    transform: scale(3.2);
+}
+
+.sponsors-grid .sponsor-piggo img {
+    transform: scale(2.7);
+}
+
+/* AJUSTE FINAL: NEUMÁTICOS MARQUETA Y RIBE */
+
+.sponsors-grid .sponsor-marqueta img {
+    transform: translateY(5px) scale(4.5);
+}
+
+.sponsors-grid .sponsor-ribe img {
+    transform: translateY(5px) scale(1.1);
+}
+
+/* AGRANDAR ALSACOR Y FYSOL */
+
+.sponsors-grid-main .sponsor-alsacor img {
+    transform: scale(3.7);
+}
+
+.sponsors-grid-main .sponsor-fysol img {
+    transform: scale(3.7);
+}
+
+/* COLABORADORES: 3 COLUMNAS EN MÓVIL */
+@media (max-width: 768px) {
+
+    .sponsors-grid-secondary {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .sponsors-grid-secondary .sponsor-logo {
+        height: 75px;
+        padding: 8px;
+    }
+
+}
+
+/* ==========================================
+   ONE POINT CHALLENGE - ULTIMATE PADEL 2027
+========================================== */
+
+.onepoint {
+  background: #080b0d;
+  color: #ffffff;
+  padding: 110px 24px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Resplandor turquesa de fondo */
+.onepoint::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  top: -250px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(
+    circle,
+    rgba(38, 220, 203, 0.16) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.onepoint-contenido {
+  max-width: 1050px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.onepoint-etiqueta {
+  display: block;
+  color: #40dfce;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin-bottom: 24px;
+}
+
+.onepoint h2 {
+  font-size: clamp(48px, 9vw, 112px);
+  font-weight: 900;
+  line-height: 0.98;
+  letter-spacing: -3px;
+  margin: 0 0 30px;
+}
+
+.onepoint h2 span {
+  color: #40dfce;
+}
+
+.onepoint-lema {
+  font-size: clamp(18px, 2.5vw, 27px);
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin-bottom: 24px;
+}
+
+.onepoint-descripcion {
+  max-width: 680px;
+  margin: 0 auto 55px;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #b9c4c7;
+}
+
+/* Datos destacados */
+
+.onepoint-datos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 40px;
+}
+
+.onepoint-dato {
+  background: #121c20;
+  border: 1px solid rgba(64, 223, 206, 0.22);
+  border-radius: 14px;
+  padding: 32px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.onepoint-dato strong {
+  color: #40dfce;
+  font-size: clamp(32px, 5vw, 60px);
+  font-weight: 900;
+  line-height: 1;
+}
+
+.onepoint-dato span {
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+  line-height: 1.5;
+}
+
+/* Aviso de plazas limitadas */
+
+.onepoint-aviso {
+  margin: 0 auto 32px;
+  padding: 22px;
+  max-width: 570px;
+  background: rgba(64, 223, 206, 0.07);
+  border: 1px solid rgba(64, 223, 206, 0.28);
+  border-radius: 12px;
+}
+
+.onepoint-aviso > span {
+  color: #40dfce;
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+.onepoint-aviso p {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #c7d1d3;
+}
+
+/* Botón informativo, todavía sin inscripción */
+
+.onepoint-boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+  padding: 16px 30px;
+  background: #40dfce;
+  color: #071011;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+/* Adaptación a móvil */
+
+@media (max-width: 700px) {
+  .onepoint {
+    padding: 75px 18px;
+  }
+
+  .onepoint-etiqueta {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .onepoint h2 {
+    font-size: clamp(42px, 11vw, 70px);
+    letter-spacing: -1.5px;
+  }
+
+  .onepoint-lema {
+    font-size: 16px;
+    letter-spacing: 1.5px;
+  }
+
+  .onepoint-descripcion {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+  }
+
+  .onepoint-datos {
+    gap: 8px;
+    margin-bottom: 28px;
+  }
+
+  .onepoint-dato {
+    padding: 22px 6px;
+    gap: 10px;
+  }
+
+  .onepoint-dato strong {
+    font-size: clamp(25px, 7vw, 42px);
+  }
+
+  .onepoint-dato span {
+    font-size: 9px;
+    letter-spacing: 0.3px;
+  }
+
+  .onepoint-aviso {
+    padding: 18px 12px;
+  }
+
+  .onepoint-boton {
+    width: 100%;
+    max-width: 360px;
+    font-size: 11px;
+    padding: 16px 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .onepoint h2 {
+    font-size: 39px;
+  }
+
+  .onepoint-dato strong {
+    font-size: 24px;
+  }
+
+  .onepoint-dato span {
+    font-size: 8px;
+  }
+}
+
+
 }

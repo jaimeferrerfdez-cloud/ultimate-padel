@@ -159,12 +159,11 @@
         <h2>CUADRO PRINCIPAL</h2>
     </div>
 
-    <div class="bracket">
+  <div class="bracket">
 
-    </div>
-<div class="bracket-round">
+    <div class="bracket-round">
 
-    <h3>CUARTOS</h3>
+        <h3>CUARTOS</h3>
 
     <div class="bracket-match">
         <div class="winner">MARQUETA · MARCELO</div>
@@ -218,6 +217,7 @@
 
 </div>
 </div>
+</div> <!-- Cierra el contenedor de B Alto -->
     <!-- B BAJO - FASE DE GRUPOS -->
     <div class="b-bajo-content" id="b-bajo-content">
         <div class="groups-section">
@@ -497,7 +497,9 @@
                     <div class="winner">REYEROS · TERCIADO</div>
                     <div>DANICAL · COMPAÑERO</div>
                 </div>
+</div> <!-- Cierra SEMIFINALES -->
 
+<div class="bracket-round"> <!-- Abre FINAL -->
                 <h3>FINAL</h3>
 
                 <div class="bracket-match bracket-final">
@@ -560,6 +562,7 @@ function mostrarBAlto(boton) {
     document.getElementById("fase-grupos").style.display = "block";
     document.getElementById("cuadro-principal").style.display = "none";
     document.getElementById("b-bajo-content").style.display = "none";
+    document.getElementById("cuadro-principal-bajo").style.display = "none";
 
     document.querySelectorAll(".result-category").forEach(btn => {
         btn.classList.remove("active");
@@ -589,6 +592,120 @@ function mostrarBBajo(boton) {
     document.querySelector(".results-view").classList.add("active");
 }
 </script>
+
+<!-- CONEXIONES DEL CUADRO DE ELIMINATORIAS -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const cuadros = document.querySelectorAll(
+        "#cuadro-principal .bracket, #cuadro-principal-bajo .bracket"
+    );
+
+    function dibujarConexiones(cuadro) {
+
+        const anterior = cuadro.querySelector(".bracket-conexiones");
+        if (anterior) anterior.remove();
+
+        if (window.innerWidth <= 768) return;
+
+        const rondas = Array.from(
+            cuadro.querySelectorAll(":scope > .bracket-round")
+        );
+
+        const ancho = cuadro.scrollWidth;
+        const alto = cuadro.scrollHeight;
+
+        const svg = document.createElementNS(
+            "http://www.w3.org/2000/svg", "svg"
+        );
+
+        svg.setAttribute("class", "bracket-conexiones");
+        svg.setAttribute("width", ancho);
+        svg.setAttribute("height", alto);
+        svg.setAttribute("viewBox", `0 0 ${ancho} ${alto}`);
+
+        const posicionCuadro = cuadro.getBoundingClientRect();
+
+        function centro(partido) {
+            const r = partido.getBoundingClientRect();
+
+            return {
+                izquierda: r.left - posicionCuadro.left,
+                derecha: r.right - posicionCuadro.left,
+                y: r.top + r.height / 2 - posicionCuadro.top
+            };
+        }
+
+        for (let i = 0; i < rondas.length - 1; i++) {
+
+            const partidosOrigen = Array.from(
+                rondas[i].querySelectorAll(":scope > .bracket-match")
+            );
+
+            const partidosDestino = Array.from(
+                rondas[i + 1].querySelectorAll(":scope > .bracket-match")
+            );
+
+            partidosDestino.forEach(function (destino, indice) {
+
+                const partido1 = partidosOrigen[indice * 2];
+                const partido2 = partidosOrigen[indice * 2 + 1];
+
+                if (!partido1 || !partido2) return;
+
+                const a = centro(partido1);
+                const b = centro(partido2);
+                const c = centro(destino);
+
+                const mitad = (a.derecha + c.izquierda) / 2;
+
+                const ruta = document.createElementNS(
+                    "http://www.w3.org/2000/svg", "path"
+                );
+
+                ruta.setAttribute(
+                    "d",
+                    `M ${a.derecha} ${a.y}
+                     H ${mitad}
+                     V ${b.y}
+                     H ${b.derecha}
+                     M ${mitad} ${(a.y + b.y) / 2}
+                     V ${c.y}
+                     H ${c.izquierda}`
+                );
+
+                ruta.setAttribute("fill", "none");
+                ruta.setAttribute("stroke", "#13c4d4");
+                ruta.setAttribute("stroke-width", "1.5");
+                ruta.setAttribute("opacity", "0.7");
+
+                svg.appendChild(ruta);
+
+            });
+        }
+
+        cuadro.appendChild(svg);
+    }
+
+    function actualizarConexiones() {
+        cuadros.forEach(dibujarConexiones);
+    }
+
+    actualizarConexiones();
+
+    window.addEventListener("resize", actualizarConexiones);
+
+    document.querySelectorAll(
+        ".result-category, .results-view"
+    ).forEach(function (boton) {
+        boton.addEventListener("click", function () {
+            requestAnimationFrame(actualizarConexiones);
+        });
+    });
+
+});
+</script>
+
 </body>
 
 </html>

@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
+
+<!-- TIPOGRAFÍA DEPORTIVA -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&display=swap" rel="stylesheet">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,19 +20,32 @@
         <div class="brand">
     <img src="images/logo.png" alt="Ultimate Pádel">
 </div>
+<button class="menu-toggle" type="button"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="menu-principal">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+        
+<nav id="menu-principal">
+    <a href="#inicio">Inicio</a>
+    <a href="#torneo">Torneo</a>
+    <a href="#categorias">Categorías</a>
+    <a href="#experiencia">Experiencia</a>
+    <a href="#one-point-challenge">One Point</a>
+    <a href="#resultados">Resultados</a>
+    <a href="#galeria">Galería</a>
+    <a href="#patrocinadores">Patrocinadores</a>
+    <a href="#contacto">Contacto</a>
+</nav>
 
-        <nav>
-            <a href="#inicio">Inicio</a>
-<a href="#torneo">Torneo</a>
-<a href="#categorias">Categorías</a>
-<a href="#resultados">Resultados</a>
-<a href="#galeria">Galería</a>
-<a href="#patrocinadores">Patrocinadores</a>
-<a href="#contacto">Contacto</a>
-        </nav>
     </header>
 
-    <main class="hero">
+   
+<main class="hero" id="inicio">
+
 
         <div class="hero-content">
             <p class="edition">ULTIMATE PÁDEL 2027</p>
@@ -38,29 +57,33 @@
             </p>
 
             <div class="hero-buttons">
-                <a href="#" class="button primary">INSCRÍBETE</a>
+                
+<span class="button primary">INSCRIPCIONES PRÓXIMAMENTE</span>
                 <a href="#torneo" class="button secondary">DESCUBRE EL TORNEO</a>
             </div>
+        
+        </div>
         </div>
 
     </main>
+
 <section class="next-tournament">
 
     <div class="tournament-heading">
         <p class="section-label">PRÓXIMA EDICIÓN</p>
-        <h2>COMING SOON<br></h2>
+        <h2>SÁBADO 10 ABRIL 2027<br></h2>
     </div>
 
     <div class="tournament-info">
 
         <div class="info-item">
             <span>FECHA</span>
-            <strong>PRÓXIMAMENTE</strong>
+            <strong>SÁBADO 10 ABRIL 2027</strong>
         </div>
 
         <div class="info-item">
             <span>LUGAR</span>
-            <strong>ARANJUEZ · MADRID</strong>
+            <strong>CLUB PADEL OCCIDENTAL, ARANJUEZ</strong>
         </div>
 
         <div class="info-item">
@@ -68,9 +91,11 @@
             <strong>PRÓXIMAMENTE</strong>
         </div>
 
-        <a href="#" class="button tournament-button">
-            QUIERO JUGAR →
-        </a>
+        
+<span class="button tournament-button">
+    INSCRIPCIONES PRÓXIMAMENTE
+</span>
+
 
     </div>
 
@@ -98,7 +123,6 @@
     </div>
 
 </section>
-</body>
 <section class="categories" id="categorias">
 
     <div class="categories-header">
@@ -175,6 +199,330 @@
     </div>
 
 </section>
+
+<!-- MUCHO MÁS QUE PÁDEL -->
+<section class="experiencia" id="experiencia">
+
+  <div class="experiencia-intro">
+    <span class="experiencia-etiqueta">ULTIMATE PADEL 2027</span>
+    <h2>MUCHO MÁS QUE PÁDEL</h2>
+    <p>
+      Porque Ultimate Padel no termina cuando sales de la pista.
+      Descubre todo lo que estamos preparando para 2027.
+    </p>
+  </div>
+
+  <div class="experiencia-grid">
+
+    
+<article class="experiencia-card" data-modal="barra-libre" role="button" tabindex="0" aria-label="Más información sobre la barra libre">
+     <img src="images/barra-libre.png"
+     alt="Cerveza Heineken"
+     class="experiencia-foto">
+      <h3>BARRA LIBRE</h3>
+      <p>Cerveza y buen ambiente para disfrutar del torneo.</p>
+
+<span class="experiencia-ver-mas">
+    DESCUBRIR MÁS <span aria-hidden="true">↗</span>
+</span>
+
+    </article>
+
+    
+<article class="experiencia-card" data-modal="foodtruck" role="button" tabindex="0" aria-label="Más información sobre el food truck">
+
+      <img src="images/foodtruck.png"
+     alt="Food truck del torneo"
+     class="experiencia-foto">
+      <h3>FOOD TRUCK</h3>
+      <p>Una experiencia gastronómica a la altura del evento.</p>
+
+<span class="experiencia-ver-mas">
+    DESCUBRIR MÁS <span aria-hidden="true">↗</span>
+</span>
+
+    </article>
+
+    
+<article class="experiencia-card" data-modal="camiseta" role="button" tabindex="0" aria-label="Más información sobre la camiseta oficial">
+
+      <img src="images/camiseta-2026.png"
+           alt="Camiseta Ultimate Padel 2026"
+           class="experiencia-camiseta">
+      <h3>CAMISETA OFICIAL</h3>
+      <p>Próximamente, el diseño de la edición 2027.</p>
+
+<span class="experiencia-ver-mas">
+    DESCUBRIR MÁS <span aria-hidden="true">↗</span>
+</span>
+
+    </article>
+
+    
+<article class="experiencia-card" data-modal="premios" role="button" tabindex="0" aria-label="Más información sobre los premios y sorteos">
+
+      <img src="images/premios.png"
+     alt="Premios del torneo"
+     class="experiencia-foto">
+      <h3>PREMIOS Y SORTEOS</h3>
+      <p>Premios, regalos y muchas sorpresas.</p>
+
+<span class="experiencia-ver-mas">
+    DESCUBRIR MÁS <span aria-hidden="true">↗</span>
+</span>
+
+    </article>
+
+  </div>
+
+</section>
+
+<!-- VENTANA EMERGENTE: CAMISETA OFICIAL -->
+<div class="experiencia-modal" id="modal-camiseta"
+     role="dialog" aria-modal="true"
+     aria-labelledby="titulo-modal-camiseta"
+     hidden>
+
+    <div class="experiencia-modal-contenido">
+
+        <button class="experiencia-modal-cerrar"
+                type="button"
+                aria-label="Cerrar ventana">×</button>
+
+        <span class="experiencia-modal-etiqueta">
+            ULTIMATE PADEL 2027
+        </span>
+
+        <h2 id="titulo-modal-camiseta">CAMISETA OFICIAL</h2>
+
+        <img src="images/camiseta-2026.png"
+             alt="Camiseta Ultimate Padel 2026"
+             class="experiencia-modal-imagen">
+
+        <h3>UN RECUERDO DE CADA EDICIÓN</h3>
+
+        <p>
+            La camiseta oficial es mucho más que una prenda:
+            es un recuerdo de la experiencia Ultimate Padel.
+        </p>
+
+        <h3>EDICIÓN 2026</h3>
+
+        <p>
+            Descubre la camiseta de nuestra edición anterior,
+            con las marcas que colaboraron con el torneo.
+        </p>
+
+        <h3>EDICIÓN 2027</h3>
+
+        <p>
+            Estamos preparando el nuevo diseño de la camiseta
+            oficial. Próximamente descubrirás cómo será
+            y qué patrocinadores formarán parte de ella.
+        </p>
+
+    </div>
+</div>
+
+
+<!-- VENTANA EMERGENTE: PREMIOS Y SORTEOS -->
+<div class="experiencia-modal" id="modal-premios"
+     role="dialog" aria-modal="true"
+     aria-labelledby="titulo-modal-premios"
+     hidden>
+
+    <div class="experiencia-modal-contenido">
+
+        <button class="experiencia-modal-cerrar"
+                type="button"
+                aria-label="Cerrar ventana">×</button>
+
+        <span class="experiencia-modal-etiqueta">
+            ULTIMATE PADEL 2027
+        </span>
+
+        <h2 id="titulo-modal-premios">PREMIOS Y SORTEOS</h2>
+
+        <img src="images/premios.png"
+             alt="Premios y sorteos del torneo"
+             class="experiencia-modal-imagen">
+
+        <h3>PREMIOS DEL TORNEO</h3>
+
+        <p>
+            Estamos preparando premios para los mejores
+            jugadores de cada categoría.
+        </p>
+
+        <p>
+            Próximamente publicaremos el listado completo
+            de premios y sus patrocinadores.
+        </p>
+
+        <h3>SORTEOS PARA PARTICIPANTES</h3>
+
+        <p>
+            Además de competir, podrás participar en sorteos
+            de regalos y experiencias gracias a nuestros
+            colaboradores.
+        </p>
+
+        <p>
+            Iremos anunciando los premios y sorteos
+            a medida que se confirmen.
+        </p>
+
+    </div>
+</div>
+
+<!-- VENTANA EMERGENTE: FOOD TRUCK -->
+<div class="experiencia-modal" id="modal-foodtruck"
+     role="dialog" aria-modal="true"
+     aria-labelledby="titulo-modal-foodtruck"
+     hidden>
+
+    <div class="experiencia-modal-contenido">
+
+        <button class="experiencia-modal-cerrar"
+                type="button"
+                aria-label="Cerrar ventana">×</button>
+
+        <span class="experiencia-modal-etiqueta">
+            ULTIMATE PADEL 2027
+        </span>
+
+        <h2 id="titulo-modal-foodtruck">FOOD TRUCK</h2>
+
+        <img src="images/foodtruck.png"
+             alt="Hamburguesa"
+             class="experiencia-modal-imagen">
+
+        <p>
+            El pádel abre el apetito. Por eso estamos preparando
+            una propuesta gastronómica especial para
+            Ultimate Padel 2027.
+        </p>
+
+        <h3>UNA HAMBURGUESERÍA DE PRIMER NIVEL</h3>
+
+        <p>
+            Queremos que la comida también forme parte
+            de la experiencia del torneo.
+        </p>
+
+        <h3>PRÓXIMAMENTE</h3>
+
+        <p>
+            Anunciaremos la hamburguesería participante,
+            el menú, los precios y los horarios cuando
+            estén confirmados.
+        </p>
+
+    </div>
+</div>
+
+<!-- VENTANA EMERGENTE: BARRA LIBRE -->
+<div class="experiencia-modal" id="modal-barra-libre"
+     role="dialog" aria-modal="true"
+     aria-labelledby="titulo-modal-barra"
+     hidden>
+
+    <div class="experiencia-modal-contenido">
+
+        <button class="experiencia-modal-cerrar"
+                type="button"
+                aria-label="Cerrar ventana">×</button>
+
+        <span class="experiencia-modal-etiqueta">
+            ULTIMATE PADEL 2027
+        </span>
+
+        <h2 id="titulo-modal-barra">BARRA LIBRE</h2>
+
+        <img src="images/barra-libre.png"
+             alt="Cerveza Heineken"
+             class="experiencia-modal-imagen">
+
+        <p>
+            Disfruta de <strong>3 horas de barra libre de
+            cerveza Heineken</strong> durante Ultimate Padel 2027.
+        </p>
+
+        <h3>¿VIENES A ACOMPAÑAR?</h3>
+
+        <p>
+            Estamos preparando pulseras para que amigos y
+            acompañantes también puedan disfrutar de la
+            barra libre sin necesidad de participar en el torneo.
+        </p>
+
+        <p>
+            Próximamente anunciaremos el horario, el precio
+            de las pulseras y las condiciones de acceso.
+        </p>
+
+    </div>
+</div>
+
+<!-- ONE POINT CHALLENGE -->
+<section class="onepoint" id="one-point-challenge">
+
+  <div class="onepoint-contenido">
+
+    <span class="onepoint-etiqueta">
+      NOVEDAD · ULTIMATE PADEL 2027
+    </span>
+
+    <h2>ONE POINT<br><span>CHALLENGE.</span></h2>
+
+    <p class="onepoint-lema">
+      UN PUNTO. TODO O NADA.
+    </p>
+
+   
+<p class="onepoint-descripcion">
+  <strong>32 PAREJAS. 31 ELIMINACIONES. UN SOLO CAMPEÓN.</strong>
+  <br><br>
+  Un único punto decide quién continúa y quién queda eliminado.
+  Sin segundas oportunidades.
+  ¿Serás capaz de ganar cinco puntos consecutivos y llevarte 100 €?
+</p>
+
+
+    <div class="onepoint-datos">
+
+      <div class="onepoint-dato">
+        <strong>100 €</strong>
+        <span>PREMIO PARA LOS CAMPEONES</span>
+      </div>
+
+      <div class="onepoint-dato">
+        <strong>5 €</strong>
+        <span>INSCRIPCIÓN POR PAREJA</span>
+      </div>
+
+      <div class="onepoint-dato">
+        <strong>32</strong>
+        <span>PAREJAS MÁXIMO</span>
+      </div>
+
+    </div>
+
+    <div class="onepoint-aviso">
+      <span>⚡ PLAZAS LIMITADAS</span>
+      <p>
+        Prioridad para los participantes de Ultimate Padel 2027.
+      </p>
+    </div>
+
+    <div class="onepoint-boton">
+      <span>INSCRIPCIONES PRÓXIMAMENTE</span>
+    </div>
+
+  </div>
+
+</section>
+
 <section class="gallery" id="galeria">
 
     <div class="gallery-header">
@@ -232,60 +580,164 @@
 </section>
 <section class="sponsors" id="patrocinadores">
 
-    <div class="sponsors-header">
-        <p class="section-label">COLABORADORES</p>
-        <h2>LOS QUE HACEN<br>ESTO POSIBLE.</h2>
-    </div>
-<div class="sponsors-grid">
+    
+<div class="sponsors-header">
+    <h2>LOS QUE HACEN ESTO POSIBLE.</h2>
+</div>
 
-  <div class="sponsor-logo sponsor-alsacor">
-    <a href="alsacor.html">
-        <img src="images/ALSACOR.png" alt="Alsacor">
-    </a>
+
+<!-- PATROCINADORES PRINCIPALES -->
+<h3 class="sponsors-subtitle">PATROCINADORES PRINCIPALES</h3>
+
+<div class="sponsors-grid sponsors-grid-main">
+
+    <div class="sponsor-logo sponsor-alsacor">
+        <a href="alsacor.html">
+            <img src="images/ALSACOR.png" alt="Alsacor">
+        </a>
     </div>
 
     <div class="sponsor-logo sponsor-fysol">
-    <a href="fysol.html">
-        <img src="images/FYSOL.png" alt="Fysol">
-    </a>
+        <a href="fysol.html">
+            <img src="images/FYSOL.png" alt="Fysol">
+        </a>
     </div>
 
-    <div class="sponsor-logo sponsor-marqueta">
-    <a href="marqueta.html">
-        <img src="images/MARQUETA.png" alt="Neumáticos Marqueta">
-    </a>
+<!-- ESPACIOS PARA FUTUROS PATROCINADORES PRINCIPALES -->
+<div class="sponsor-logo sponsor-placeholder"></div>
+<div class="sponsor-logo sponsor-placeholder"></div>
+<div class="sponsor-logo sponsor-placeholder"></div>
+<div class="sponsor-logo sponsor-placeholder"></div>
+
 </div>
+
+<!-- COLABORADORES -->
+<h3 class="sponsors-subtitle">COLABORADORES</h3>
+
+<div class="sponsors-grid sponsors-grid-secondary">
+
+    <div class="sponsor-logo sponsor-marqueta">
+        <a href="marqueta.html">
+            <img src="images/MARQUETA.png" alt="Neumáticos Marqueta">
+        </a>
+    </div>
 
     <div class="sponsor-logo sponsor-studio360">
-    <a href="studio360.html">
-        <img src="images/STUDIO360.png" alt="Studio 360">
-    </a>
-</div>
-<div class="sponsor-logo sponsor-bdp">
-    <a href="bdp.html">
-        <img src="images/BDP.png" alt="BDP Burger">
-    </a>
-</div>
+        <a href="studio360.html">
+            <img src="images/STUDIO360.png" alt="Studio 360">
+        </a>
+    </div>
 
-<div class="sponsor-logo sponsor-autosae">
-    <a href="autosae.html">
-        <img src="images/AUTOSAE.png" alt="Autosae">
-    </a>
-</div>
+    <div class="sponsor-logo sponsor-bdp">
+        <a href="bdp.html">
+            <img src="images/BDP.png" alt="BDP Burger">
+        </a>
+    </div>
 
-<div class="sponsor-logo">
-    <a href="eleclerc.html">
-        <img src="images/ELECLERC.png" alt="E.Leclerc Aranjuez">
-    </a>
-</div>
+    <div class="sponsor-logo sponsor-autosae">
+        <a href="autosae.html">
+            <img src="images/AUTOSAE.png" alt="Autosae">
+        </a>
+    </div>
 
-<div class="sponsor-logo">
-    <a href="base.html">
-        <img src="images/BASE.png" alt="BASE">
-    </a>
+    <div class="sponsor-logo">
+        <a href="eleclerc.html">
+            <img src="images/ELECLERC.png" alt="E.Leclerc Aranjuez">
+        </a>
+    </div>
+
+    <div class="sponsor-logo">
+        <a href="base.html">
+            <img src="images/BASE.png" alt="BASE">
+        </a>
+    </div>
+
+    <div class="sponsor-logo sponsor-heineken">
+        <a href="heineken.html">
+            <img src="images/HEINEKEN.png" alt="Heineken">
+        </a>
+    </div>
+
+    <div class="sponsor-logo sponsor-piggo">
+        <a href="piggo.html">
+            <img src="images/PIGGO.png" alt="Piggo">
+        </a>
+    </div>
+
+    <div class="sponsor-logo sponsor-ribe">
+        <a href="ribe.html">
+            <img src="images/RIBE.png" alt="Ribe">
+        </a>
+    </div>
+
+    <div class="sponsor-logo sponsor-fruypis">
+        <a href="fruypis.html">
+            <img src="images/FRUYPIS.png" alt="Fruypis">
+        </a>
+    </div>
+
+<!-- ESPACIOS PARA FUTUROS COLABORADORES -->
+<div class="sponsor-logo sponsor-placeholder"></div>
+<div class="sponsor-logo sponsor-placeholder"></div>
+<div class="sponsor-logo sponsor-placeholder"></div>
+<div class="sponsor-logo sponsor-placeholder"></div>
+<div class="sponsor-logo sponsor-placeholder"></div>
+
 </div>
 </div>
 </section>
+
+
+<section class="registration" id="inscripcion" hidden>
+    <div class="registration-header">
+        <p class="section-label">INSCRIPCIONES</p>
+        <h2>APÚNTATE<br>A JUGAR.</h2>
+        <p>Completa los datos de la pareja y selecciona la categoría en la que queréis participar.</p>
+    </div>
+
+    <form id="registration-form">
+
+        <div class="form-player">
+            <h3>JUGADOR 1</h3>
+
+            <label for="jugador1">Nombre y apellidos</label>
+            <input type="text" id="jugador1" name="jugador1" required>
+
+            <label for="telefono1">Teléfono</label>
+            <input type="tel" id="telefono1" name="telefono1" required>
+        </div>
+
+        <div class="form-player">
+            <h3>JUGADOR 2</h3>
+
+            <label for="jugador2">Nombre y apellidos</label>
+            <input type="text" id="jugador2" name="jugador2" required>
+
+            <label for="telefono2">Teléfono</label>
+            <input type="tel" id="telefono2" name="telefono2" required>
+        </div>
+
+        <div class="form-field">
+            <label for="categoria">Categoría</label>
+            <select id="categoria" name="categoria" required>
+                <option value="">Selecciona una categoría</option>
+                <option value="B Alto">B Alto</option>
+                <option value="B Bajo">B Bajo</option>
+                <option value="C">C</option>
+            </select>
+        </div>
+
+        <div class="form-field">
+            <label for="observaciones">Observaciones (opcional)</label>
+            <textarea id="observaciones" name="observaciones" rows="4"></textarea>
+        </div>
+
+        <button type="submit" class="button primary">ENVIAR INSCRIPCIÓN</button>
+
+        <p id="form-message"></p>
+    </form>
+</section>
+
 <section class="contact" id="contacto">
 
     <div class="contact-content">
@@ -310,5 +762,197 @@
     </div>
 
 </section>
+<script>
+document.getElementById("registration-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const datos = {
+        jugador1: document.getElementById("jugador1").value,
+        telefono1: document.getElementById("telefono1").value,
+        jugador2: document.getElementById("jugador2").value,
+        telefono2: document.getElementById("telefono2").value,
+        categoria: document.getElementById("categoria").value,
+        observaciones: document.getElementById("observaciones").value
+    };
+
+    document.getElementById("form-message").textContent = "ENVIANDO INSCRIPCION...";
+
+    fetch("https://script.google.com/macros/s/AKfycbzlm1j1yjYFw0UHawMoNKW-zVYDBARj3QdJl2kvMutyBNSKRDJ6tkrG0J9zZKLuk8OqVg/exec", {
+        method: "POST",
+        body: JSON.stringify(datos)
+    })
+    .then(function() {
+        document.getElementById("form-message").textContent = "INSCRIPCION RECIBIDA. NOS PONDREMOS EN CONTACTO PARA CONFIRMAR LA PLAZA.";
+        document.getElementById("registration-form").reset();
+    })
+    .catch(function() {
+        document.getElementById("form-message").textContent = "NO SE HA PODIDO ENVIAR LA INSCRIPCION.";
+    });
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const botonMenu = document.querySelector(".menu-toggle");
+    const menu = document.getElementById("menu-principal");
+
+    if (!botonMenu || !menu) return;
+
+    function cerrarMenu() {
+        botonMenu.classList.remove("activo");
+        botonMenu.setAttribute("aria-expanded", "false");
+        botonMenu.setAttribute("aria-label", "Abrir menú");
+        menu.classList.remove("menu-abierto");
+    }
+
+    botonMenu.addEventListener("click", function () {
+        const abierto = menu.classList.toggle("menu-abierto");
+
+        botonMenu.classList.toggle("activo", abierto);
+        botonMenu.setAttribute("aria-expanded", String(abierto));
+        botonMenu.setAttribute(
+            "aria-label",
+            abierto ? "Cerrar menú" : "Abrir menú"
+        );
+    });
+
+    menu.querySelectorAll("a").forEach(function (enlace) {
+        enlace.addEventListener("click", cerrarMenu);
+    });
+
+    document.addEventListener("keydown", function (evento) {
+        if (evento.key === "Escape") cerrarMenu();
+    });
+});
+</script>
+
+<!-- ANIMACIONES AL HACER SCROLL -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    if (!window.matchMedia(
+        "(prefers-reduced-motion: no-preference)"
+    ).matches) return;
+
+    if (!("IntersectionObserver" in window)) return;
+
+    const elementos = document.querySelectorAll(
+        ".about, .categories, .format, .experiencia-intro, " +
+        ".experiencia-card, .gallery-header, .gallery-photo, " +
+        ".results, .sponsors, .contact"
+    );
+
+    const observer = new IntersectionObserver((entradas) => {
+        entradas.forEach((entrada) => {
+            if (entrada.isIntersecting) {
+                entrada.target.classList.add("visible");
+                observer.unobserve(entrada.target);
+            }
+        });
+    }, {
+        threshold: 0.08,
+        rootMargin: "0px 0px -30px 0px"
+    });
+
+    elementos.forEach((elemento) => {
+        elemento.classList.add("reveal");
+        observer.observe(elemento);
+    });
+
+    document.body.classList.add("js-animations");
+
+});
+</script>
+
+
+<!-- INTERACTIVIDAD DE LAS TARJETAS -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const tarjetas = document.querySelectorAll(
+        ".experiencia-card[data-modal]"
+    );
+
+    let ventanaActiva = null;
+    let elementoAnterior = null;
+
+    function cerrarVentana() {
+        if (!ventanaActiva) return;
+
+        ventanaActiva.hidden = true;
+        document.body.style.overflow = "";
+
+        ventanaActiva = null;
+
+        if (elementoAnterior) {
+            elementoAnterior.focus();
+        }
+    }
+
+    function abrirVentana(tarjeta) {
+        const nombre = tarjeta.dataset.modal;
+        const ventana = document.getElementById("modal-" + nombre);
+
+        if (!ventana) return;
+
+        elementoAnterior = document.activeElement;
+        ventanaActiva = ventana;
+        ventana.hidden = false;
+
+        document.body.style.overflow = "hidden";
+
+        const botonCerrar = ventana.querySelector(
+            ".experiencia-modal-cerrar"
+        );
+
+        if (botonCerrar) botonCerrar.focus();
+    }
+
+    tarjetas.forEach(function (tarjeta) {
+
+        tarjeta.addEventListener("click", function () {
+            abrirVentana(tarjeta);
+        });
+
+        tarjeta.addEventListener("keydown", function (evento) {
+            if (evento.key === "Enter" || evento.key === " ") {
+                evento.preventDefault();
+                abrirVentana(tarjeta);
+            }
+        });
+
+    });
+
+    document.querySelectorAll(".experiencia-modal").forEach(
+        function (ventana) {
+
+            const botonCerrar = ventana.querySelector(
+                ".experiencia-modal-cerrar"
+            );
+
+            if (botonCerrar) {
+                botonCerrar.addEventListener("click", cerrarVentana);
+            }
+
+            ventana.addEventListener("click", function (evento) {
+                if (evento.target === ventana) {
+                    cerrarVentana();
+                }
+            });
+
+        }
+    );
+
+    document.addEventListener("keydown", function (evento) {
+        if (evento.key === "Escape" && ventanaActiva) {
+            cerrarVentana();
+        }
+    });
+
+});
+</script>
+
+
+
 </body>
 </html>
