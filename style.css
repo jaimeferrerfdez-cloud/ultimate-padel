@@ -311,7 +311,7 @@ background-repeat: no-repeat;
     transition: 0.3s ease;
 }
 
-.category-card:first-child {
+.category-card {
     border-left: 1px solid #bdbdbd;
 }
 
