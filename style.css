@@ -311,9 +311,12 @@ background-repeat: no-repeat;
     transition: 0.3s ease;
 }
 
+
 .category-card {
     border-left: 1px solid #bdbdbd;
+    border-bottom: 1px solid #bdbdbd;
 }
+
 
 .category-card > span {
     font-size: 13px;
