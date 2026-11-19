@@ -3027,5 +3027,16 @@ h1, h2, h3 {
   }
 }
 
+/* PRUEBA: desactivar movimiento de categorías en móvil */
+@media (hover: none) and (pointer: coarse) {
+    .category-card:hover {
+        transform: none;
+    }
+
+    .category-card:hover .category-image img {
+        transform: none;
+    }
+}
+
 
 }
